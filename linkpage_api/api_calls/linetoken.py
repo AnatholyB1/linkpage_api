@@ -9,7 +9,7 @@ from frappe.utils.password import get_decrypted_password
 
 @frappe.whitelist(allow_guest=True)
 def get_oauth2_authorize_url():
-	redirect_to = 'https://dev.zaviago.com/api/method/linkpage_api.api_calls.linehandle.login_via_line'
+	redirect_to = 'https://library.test:8000/api/method/linkpage_api.api_calls.linehandle.login_via_line'
 	provider = 'line'
 
 	flow = get_oauth2_flow(provider)
