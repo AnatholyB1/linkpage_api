@@ -114,7 +114,7 @@ def login_oauth_user(
         phone = 'false'
  
     getname = user.name
-    r  = 'https://honda-storefront.vercel.app/?token='+token+'&phoneverify='+phone+'&username='+getname
+    r  = 'https:/linkter.vercel.app/?token='+token+'&phoneverify='+phone+'&username='+getname
     frappe.local.response['type'] = 'redirect'
     frappe.local.response['location'] = r
 

@@ -17,7 +17,7 @@ def get_oauth2_authorize_url():
 	state = {
 		"site": frappe.utils.get_url(),
 		"token": frappe.generate_hash(),
-		"redirect_to": 'http://localhost:5173/setup',
+		"redirect_to": 'http://linkter.vercel.app/setup',
 	}
 
 	# relative to absolute url
