@@ -9,7 +9,7 @@ from frappe.utils.password import get_decrypted_password
 
 @frappe.whitelist(allow_guest=True)
 def get_oauth2_authorize_url():
-	redirect_to = 'https://library.test:8000/api/method/linkpage_api.api_calls.linehandle.login_via_line'
+	redirect_to = 'https://linkter.vercel.app/api/method/linkpage_api.api_calls.linehandle.login_via_line'
 	provider = 'line'
 
 	flow = get_oauth2_flow(provider)
@@ -17,7 +17,7 @@ def get_oauth2_authorize_url():
 	state = {
 		"site": frappe.utils.get_url(),
 		"token": frappe.generate_hash(),
-		"redirect_to": 'http://localhost:5173/setup',
+		"redirect_to": 'http://linkter.vercel.app/setup',
 	}
 
 	# relative to absolute url
